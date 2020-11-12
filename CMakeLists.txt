@@ -9,3 +9,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 
 add_executable(server server.cpp)
 add_executable(client client.cpp)
+
+set(CPACK_GENERATOR "DEB")
+
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Unix socket client-server")
+set(CPACK_PACKAGE_VENDOR "Kokorev")
+set(CPACK_PACKAGE_CONTACT "Kokorev Y.S. <kokorev.yaroslav@gmail.com>")
+
+include(CPack)
