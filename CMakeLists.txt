@@ -10,6 +10,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 add_executable(server server.cpp)
 add_executable(client client.cpp)
 
+install(TARGETS server client DESTINATION bin)
+
 set(CPACK_GENERATOR "DEB")
 
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
